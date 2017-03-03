@@ -5,11 +5,16 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var compression = require('compression');
+
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+// Compress all requests
+app.use(compression());
 
 // view engine setup
 app.set('view engine', 'hbs');
@@ -28,6 +33,7 @@ app.use('/images', express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
