@@ -1,1 +1,1 @@
-vr-playground
+![sticker-aframe1.png](https://bitbucket.org/repo/yxLear/images/2789995046-sticker-aframe1.png)vr-playground
