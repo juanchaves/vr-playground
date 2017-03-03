@@ -11,6 +11,10 @@ io.on('connection', function(socket) {
     socket.on('buttonTap', function(msg) {
         io.emit('serverMessage', msg);
     });
+
+    socket.on('clientEvent', function(data){
+	       console.log(data);
+    });
 });
 
 
