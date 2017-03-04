@@ -5,8 +5,8 @@
   <a-assets>
       <img id="sky" src="/images/360img.jpg">
   </a-assets>
-  <!-- <a-asset-item id="platform" src="assets/platform.dae"></a-asset-item> -->
-  <!-- <a-collada-model src="#platform" position="0 -0.95 0"></a-collada-model> -->
+  <a-asset-item id="deer" src="/images/deer.dae"></a-asset-item>
+  <a-collada-model src="#deer" position="-3.15 -47.95 -493.99" rotation="0 -40.68 0" scale="4 4 4"></a-collada-model>
 
   <a-sphere id="ball" color="orange" position="9.35 24.52 -53.59" rotation="0 45 45" scale="4 4 4">
     <a-animation attribute="position" to="8.35 20.52 -50.59" direction="alternate" dur="2000"
@@ -26,13 +26,12 @@
 
 <script type="text/javascript">
 
-var dest = document.querySelector('#ball');
-var resort = document.querySelector('#resorts');
-dest.addEventListener('click', function () {
-resort.emit('spiner');
-});
-resort.addEventListener('click', function () {
-resort.emit('shrink');
+var ball = document.querySelector('#ball');
+
+ball.addEventListener('click', function () {
+
+  //TODO: link socket to event
+
 });
 
 </script>
